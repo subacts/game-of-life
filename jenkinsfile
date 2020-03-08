@@ -1,0 +1,11 @@
+node{
+    stage('get code from GIT'){
+        git "https://github.com/subacts/game-of-life.git"
+    }
+    stage('clean'){
+        sh 'mvn clean'
+    }
+    stage('install'){
+        sh 'mvn install'
+    }
+}
